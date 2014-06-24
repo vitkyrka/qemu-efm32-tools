@@ -11,7 +11,12 @@ SECTIONS
     *(.dtb.*)
   }
 
-  . = 0x8C000000;
+  . = 0x800;
+  .resource_table : {
+   *(.resource_table.*)
+  }
+
+  . = 0x8000;
   .kernel : {
     *(.kernel.*)
   }
